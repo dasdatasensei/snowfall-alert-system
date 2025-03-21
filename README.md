@@ -11,6 +11,15 @@ A lightweight, serverless application that monitors real-time snowfall condition
 [![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg)](https://www.docker.com/)
 [![pytest](https://img.shields.io/badge/Testing-pytest-red.svg)](https://docs.pytest.org/)
 
+## Created By
+
+👩‍💻 Dr. Jody-Ann S. Jones ❄️
+
+[![Senior ML & Data Engineer](https://img.shields.io/badge/Senior-ML%20%26%20Data%20Engineer-blue)](https://www.drjodyannjones.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-drjodyannjones.com-brightgreen)](https://www.drjodyannjones.com)
+[![Email](https://img.shields.io/badge/Email-jody%40thedatasensei.com-red)](mailto:jody@thedatasensei.com)
+[![GitHub](https://img.shields.io/badge/GitHub-dasdatasensei-black)](https://github.com/dasdatasensei)
+
 ## Overview
 
 The Snowfall Alert System automatically checks snowfall data for approximately 10 ski resorts within a 100-mile radius of Park City every 6 hours. When fresh snow accumulation exceeds your configured thresholds, you'll receive a Slack notification, helping you plan your perfect powder day.
@@ -251,6 +260,8 @@ While this project is primarily for personal use, contributions are welcome. Ple
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+Copyright © 2025 [Dr. Jody-Ann S. Jones](https://www.drjodyannjones.com). All rights reserved.
 
 ## Acknowledgments
 
