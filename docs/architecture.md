@@ -4,9 +4,9 @@ This document outlines the architecture of the Snowfall Alert System, detailing 
 
 ## Architecture Overview
 
-The Snowfall Alert System follows a serverless architecture pattern, leveraging cloud services to create a lightweight, scalable solution. The system runs entirely on AWS Lambda with Slack integration for notifications, eliminating the need for maintaining servers or infrastructure.
+The Snowfall Alert System follows a serverless architecture pattern, leveraging cloud services to create a lightweight, scalable solution. The system runs entirely on AWS Lambda with Slack integration for notifications, eliminating the need for managing servers.
 
-![Architecture Diagram](../assets/architecture.svg)
+![Architecture Diagram](../assets/snowfall_alert_sys_arch.png)
 
 ## Core Components
 

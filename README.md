@@ -22,7 +22,7 @@ The system consists of two main components:
 1. **AWS Lambda Function**: Python-based serverless function that retrieves and processes weather data.
 2. **Slack Webhooks**: Handles the delivery of notifications to your Slack workspace.
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](assets/snowfall_alert_sys_arch.png)
 
 ## Getting Started
 
