@@ -253,13 +253,9 @@ If you're not receiving notifications:
 3. Ensure the Slack app has the necessary permissions
 4. Try sending a test message to your webhook URL
 
-## Contributing
-
-While this project is primarily for personal use, contributions are welcome. Please feel free to submit issues or pull requests.
-
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
 
 Copyright © 2025 [Dr. Jody-Ann S. Jones](https://www.drjodyannjones.com). All rights reserved.
 
