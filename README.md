@@ -2,6 +2,15 @@
 
 A lightweight, serverless application that monitors real-time snowfall conditions at ski resorts near Park City, Utah, and sends notifications via Slack when significant snowfall occurs.
 
+[![Python 3.9](https://img.shields.io/badge/Python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-orange.svg)](https://aws.amazon.com/lambda/)
+[![CloudWatch](https://img.shields.io/badge/AWS-CloudWatch-blue.svg)](https://aws.amazon.com/cloudwatch/)
+[![OpenWeatherMap](https://img.shields.io/badge/API-OpenWeatherMap-green.svg)](https://openweathermap.org/api)
+[![WeatherAPI](https://img.shields.io/badge/API-WeatherAPI-yellow.svg)](https://www.weatherapi.com/)
+[![Slack](https://img.shields.io/badge/Notifications-Slack-purple.svg)](https://api.slack.com/messaging/webhooks)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg)](https://www.docker.com/)
+[![pytest](https://img.shields.io/badge/Testing-pytest-red.svg)](https://docs.pytest.org/)
+
 ## Overview
 
 The Snowfall Alert System automatically checks snowfall data for approximately 10 ski resorts within a 100-mile radius of Park City every 6 hours. When fresh snow accumulation exceeds your configured thresholds, you'll receive a Slack notification, helping you plan your perfect powder day.
