@@ -200,20 +200,28 @@ The project follows a modular structure with clear separation of concerns:
 
 ```
 snowfall-alert-system/
+├── assets/                 # Images and assets (architecture diagram)
 ├── docs/                   # Documentation
-├── src/                    # Source code
-│   ├── weather/            # Weather data retrieval and processing
-│   ├── notifications/      # Notification handling
-│   ├── config/             # Configuration
-│   ├── utils/              # Utility functions
-│   ├── lambda_function.py  # Main Lambda handler
-│   └── requirements.txt    # Python dependencies
-├── tests/                  # Test suite
-├── mobile/                 # Android application
-│   └── android/            # Android project
 ├── infrastructure/         # Deployment resources
-│   ├── terraform/          # Infrastructure as Code
-│   └── aws/                # AWS deployment files
+│   ├── aws/                # AWS deployment files
+│   └── terraform/          # Infrastructure as Code
+├── localstack/             # LocalStack initialization scripts
+├── scripts/                # Utility scripts
+├── src/                    # Source code
+│   ├── config/             # Configuration and settings
+│   ├── core/               # Core processing logic
+│   ├── notifications/      # Notification handling (Slack)
+│   ├── utils/              # Utility functions and logging
+│   ├── weather/            # Weather data retrieval and processing
+│   └── lambda_function.py  # Main Lambda handler
+├── tests/                  # Test suite
+├── .env.example            # Example environment variables
+├── docker-compose.yml      # Development Docker configuration
+├── docker-compose.test.yml # Testing Docker configuration
+├── docker-compose.prod.yml # Production Docker configuration
+├── Dockerfile              # Docker container definition
+├── Makefile                # Development tasks
+├── LICENSE                 # MIT License
 └── README.md               # This file
 ```
 
