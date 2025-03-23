@@ -98,8 +98,8 @@ WEATHERAPI_KEY=your_weatherapi_key_here
 VISUALCROSSING_API_KEY=your_visualcrossing_api_key_here
 
 # Slack Webhooks
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
-SLACK_MONITORING_WEBHOOK_URL=https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/TXXXXX/BXXXXX/XXXXX
+SLACK_MONITORING_WEBHOOK_URL=https://hooks.slack.com/services/TXXXXX/BXXXXX/XXXXX
 
 # Application Settings
 LOG_LEVEL=DEBUG
