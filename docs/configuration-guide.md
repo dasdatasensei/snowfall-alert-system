@@ -8,24 +8,24 @@ The system uses environment variables for configuration. These can be set in you
 
 ### Required Variables
 
-| Variable              | Description                 | Example                                        |
-| --------------------- | --------------------------- | ---------------------------------------------- |
-| `OPENWEATHER_API_KEY` | API key for OpenWeatherMap  | `abcdef123456789`                              |
-| `WEATHERAPI_KEY`      | API key for WeatherAPI.com  | `abcdef123456789`                              |
-| `SLACK_WEBHOOK_URL`   | Webhook URL for snow alerts | `https://hooks.slack.com/services/XXX/YYY/ZZZ` |
+| Variable              | Description                 | Example                                                |
+| --------------------- | --------------------------- | ------------------------------------------------------ |
+| `OPENWEATHER_API_KEY` | API key for OpenWeatherMap  | `abcdef123456789`                                      |
+| `WEATHERAPI_KEY`      | API key for WeatherAPI.com  | `abcdef123456789`                                      |
+| `SLACK_WEBHOOK_URL`   | Webhook URL for snow alerts | `https://hooks.slack.com/services/TXXXXX/BXXXXX/XXXXX` |
 
 ### Optional Variables
 
-| Variable                       | Description                                            | Default                     | Example                                        |
-| ------------------------------ | ------------------------------------------------------ | --------------------------- | ---------------------------------------------- |
-| `SLACK_MONITORING_WEBHOOK_URL` | Webhook URL for monitoring channel                     | Same as `SLACK_WEBHOOK_URL` | `https://hooks.slack.com/services/XXX/YYY/ZZZ` |
-| `LOG_LEVEL`                    | Logging level                                          | `INFO`                      | `DEBUG`                                        |
-| `VERIFICATION_THRESHOLD`       | Maximum allowable difference (inches) between sources  | `2.0`                       | `3.5`                                          |
-| `ALERT_COOLDOWN_HOURS`         | Hours before sending another alert for the same resort | `12`                        | `24`                                           |
-| `THRESHOLD_LIGHT`              | Minimum inches for light snow alert                    | `2`                         | `3`                                            |
-| `THRESHOLD_MODERATE`           | Minimum inches for moderate snow alert                 | `6`                         | `7`                                            |
-| `THRESHOLD_HEAVY`              | Minimum inches for heavy snow alert                    | `12`                        | `10`                                           |
-| `CHECK_FREQUENCY`              | Hours between checks (for testing)                     | `6`                         | `3`                                            |
+| Variable                       | Description                                            | Default                     | Example                                                |
+| ------------------------------ | ------------------------------------------------------ | --------------------------- | ------------------------------------------------------ |
+| `SLACK_MONITORING_WEBHOOK_URL` | Webhook URL for monitoring channel                     | Same as `SLACK_WEBHOOK_URL` | `https://hooks.slack.com/services/TXXXXX/BXXXXX/XXXXX` |
+| `LOG_LEVEL`                    | Logging level                                          | `INFO`                      | `DEBUG`                                                |
+| `VERIFICATION_THRESHOLD`       | Maximum allowable difference (inches) between sources  | `2.0`                       | `3.5`                                                  |
+| `ALERT_COOLDOWN_HOURS`         | Hours before sending another alert for the same resort | `12`                        | `24`                                                   |
+| `THRESHOLD_LIGHT`              | Minimum inches for light snow alert                    | `2`                         | `3`                                                    |
+| `THRESHOLD_MODERATE`           | Minimum inches for moderate snow alert                 | `6`                         | `7`                                                    |
+| `THRESHOLD_HEAVY`              | Minimum inches for heavy snow alert                    | `12`                        | `10`                                                   |
+| `CHECK_FREQUENCY`              | Hours between checks (for testing)                     | `6`                         | `3`                                                    |
 
 ## Configuration Files
 
@@ -91,14 +91,15 @@ THRESHOLDS = {
 
 For local development, create a `.env` file in the project root with your configuration:
 
-```
+```bash
 # API Keys
-OPENWEATHER_API_KEY=your_openweathermap_api_key
-WEATHERAPI_KEY=your_weatherapi_key
+OPENWEATHER_API_KEY=your_openweather_api_key_here
+WEATHERAPI_KEY=your_weatherapi_key_here
+VISUALCROSSING_API_KEY=your_visualcrossing_api_key_here
 
-# Slack Configuration
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/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
-SLACK_MONITORING_WEBHOOK_URL=https://hooks.slack.com/services/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
+# Slack Webhooks
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
+SLACK_MONITORING_WEBHOOK_URL=https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
 
 # Application Settings
 LOG_LEVEL=DEBUG
