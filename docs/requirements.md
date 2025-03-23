@@ -12,11 +12,11 @@
 
 ### Overview
 
-The Snowfall Alert System is an automated solution designed to monitor real-time snowfall conditions at ski resorts near Park City, Utah, and deliver timely alerts to a user's Android device when specific snowfall thresholds are met. The system will operate continuously through cloud-based architecture without requiring the user's device to remain powered on.
+The Snowfall Alert System is an automated solution designed to monitor real-time snowfall conditions at ski resorts near Park City, Utah, and deliver timely alerts to Slack channels when specific snowfall thresholds are met. The system will operate continuously through cloud-based architecture without requiring any user device to remain powered on.
 
 ### Objectives
 
-1. To provide skiers and snowboarders with timely notifications about fresh snowfall at nearby resorts
+1. To provide skiers and snowboarders with timely notifications about fresh snowfall at nearby resorts via Slack
 2. To enable data-driven decisions about which ski resort to visit based on current snow conditions
 3. To implement a lightweight, reliable system that operates automatically with minimal maintenance
 4. To leverage free cloud services to ensure cost-effective, continuous operation
@@ -28,13 +28,13 @@ The system will:
 - Monitor approximately 10 ski resorts within a 100-mile radius of Park City, Utah
 - Collect data on snowfall amounts, both current accumulation and forecast
 - Process data against user-defined thresholds to determine alert conditions
-- Deliver push notifications to the user's Android device
+- Deliver notifications to configured Slack channels
 - Run on cloud infrastructure without requiring user device operation
 
 The system will not:
 
 - Provide general weather forecasting beyond snowfall conditions
-- Support iOS devices in the initial implementation
+- Support mobile app notifications in the initial implementation
 - Offer a web-based interface in the initial implementation
 - Perform historical data analysis or trend predictions
 - Include resort amenities or lift status information
@@ -42,7 +42,7 @@ The system will not:
 ### Success Criteria
 
 1. System successfully retrieves accurate snowfall data for all specified resorts
-2. Notifications are delivered reliably when snowfall thresholds are met
+2. Notifications are delivered reliably to Slack channels when snowfall thresholds are met
 3. The system operates continuously within free tier limits of all services
 4. Alerts are timely, with data no more than 6 hours old
 5. False positives are minimized through data verification between multiple sources
@@ -76,7 +76,6 @@ The system will not:
 
    - Python 3.9+ for serverless function development
    - Requests library for API communication
-   - Firebase Admin SDK for notification management
    - JSON and datetime modules for data processing
    - Logging module for comprehensive error tracking
 
@@ -116,7 +115,7 @@ The system will not:
 1. **Slack Webhooks**
 
    - Incoming webhook integration
-   - Custom message formatting with rich content
+   - Custom message formatting with rich content using Block Kit
    - Channel-based notification routing
    - Error handling for failed deliveries
    - Retry mechanism for delivery failures
@@ -161,12 +160,12 @@ The system will not:
    - Environment variable templates
    - README with setup instructions
 
-2. **Android Application**
-   - Simple FCM client application
-   - Notification handling implementation
-   - Token management code
-   - User preference storage
-   - APK file for installation
+2. **Slack Integration**
+   - Slack webhook configuration documentation
+   - Message templates and formats
+   - Monitoring channel setup
+   - Alert channel setup
+   - Custom notification formatting
 
 ### Documentation
 
@@ -180,13 +179,13 @@ The system will not:
 2. **Setup Guides**
 
    - Step-by-step AWS Lambda deployment instructions
-   - Firebase project configuration guide
-   - Android application installation guide
+   - Slack workspace and app configuration guide
+   - Webhook and channel setup instructions
    - API registration walkthrough
 
 3. **User Documentation**
    - Alert configuration instructions
-   - Notification management guide
+   - Slack notification management guide
    - Troubleshooting common issues
    - System limitations explanation
 
@@ -196,7 +195,7 @@ The system will not:
 
    - API integration test results
    - AWS Lambda deployment verification
-   - FCM notification delivery testing
+   - Slack notification delivery testing
    - End-to-end system testing
 
 2. **Performance Metrics**
@@ -250,20 +249,20 @@ The system will not:
    - Set up environment variables for API keys
    - Create CloudWatch Events schedule for 6-hour intervals
 
-2. **Afternoon: Firebase and Notification System (5 hours)**
-   - Create Firebase project
-   - Configure Firebase Cloud Messaging
-   - Generate service account credentials
-   - Implement Firebase Admin SDK integration
-   - Develop notification payload structure
-   - Build simple Android app skeleton with FCM client
-   - Configure device token registration
+2. **Afternoon: Slack Integration and Notification System (5 hours)**
+   - Create Slack workspace if needed
+   - Configure Slack incoming webhooks
+   - Set up alert and monitoring channels
+   - Develop Slack message payload structure
+   - Implement webhook integration
+   - Test notification delivery
+   - Configure formatting for different alert levels
 
 ### Day 3: Integration, Testing and Deployment
 
 1. **Morning: Integration and Testing (3 hours)**
 
-   - Connect Lambda function with Firebase notifications
+   - Connect Lambda function with Slack notifications
    - Perform end-to-end testing
    - Debug and fix any issues
    - Optimize code for performance
@@ -272,7 +271,7 @@ The system will not:
 2. **Afternoon: Final Deployment and Documentation (5 hours)**
    - Deploy final Lambda function
    - Finalize CloudWatch Events schedule
-   - Complete Android app and install on device
+   - Complete Slack notification template customization
    - Document system architecture and setup process
    - Create operational guide for future maintenance
    - Test system with real-world data
@@ -282,11 +281,11 @@ The system will not:
 ### Sprint Goals (3-Day Sprint)
 
 - **Day 1 Goal**: Functioning data retrieval system that accurately identifies snowfall conditions at target resorts
-- **Day 2 Goal**: Fully configured cloud infrastructure with working notification capabilities
+- **Day 2 Goal**: Fully configured cloud infrastructure with working Slack notification capabilities
 - **Day 3 Goal**: Complete, deployed system with documentation and operational guide
 
 ### Milestone Dates
 
 - **Day 1 (March 21, 2025)**: Core functionality completed and tested
-- **Day 2 (March 22, 2025)**: Cloud infrastructure and notification system operational
+- **Day 2 (March 22, 2025)**: Cloud infrastructure and Slack notification system operational
 - **Day 3 (March 23, 2025)**: System fully deployed and operational
