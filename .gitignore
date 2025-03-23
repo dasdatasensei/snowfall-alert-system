@@ -13,6 +13,8 @@ credentials.json
 .aws/
 .vscode/settings.json
 secrets/
+secrets.yaml
+aws_credentials
 
 #=======================================================================
 # Python
@@ -71,17 +73,11 @@ lambda_deployment.zip
 
 # Terraform
 .terraform/
-.terraform.lock.hcl
 *.tfstate
-*.tfstate.*
-*.tfvars
-*.tfvars.json
-crash.log
-crash.*.log
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
+*.tfstate.backup
+.terraform.lock.hcl
+terraform.tfvars
+# Use terraform.tfvars.example instead
 
 # CloudFormation
 *-cloudformation-template-*.json
@@ -173,3 +169,19 @@ logs/
 # Test data that shouldn't be versioned
 test_data/
 mock_responses/
+
+# Environment variables
+config.ini
+secrets.json
+
+# Other
+.DS_Store
+.vscode/
+.idea/
+
+# Scripts created for webhook cleaning
+clean_history.sh
+clean_webhooks.py
+clean_secrets.sh
+patterns.txt
+replacements.sed

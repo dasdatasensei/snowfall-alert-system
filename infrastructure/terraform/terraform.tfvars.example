@@ -1,0 +1,19 @@
+aws_region = "us-east-1"
+environment = "dev"
+lambda_deployment_package = "../../deployment/snowfall-alert-package.zip"
+
+# API Keys - Replace with your actual keys
+openweather_api_key = "your_openweather_api_key_here"
+weatherapi_key = "your_weatherapi_key_here"
+
+# Slack Webhooks - Replace with your actual webhook URLs
+slack_webhook_url = "https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
+slack_monitoring_webhook_url = "https://hooks.slack.com/services/TXXXXXXXX/BXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX"
+
+# Application Settings
+log_level = "INFO"
+threshold_light = "2"
+threshold_moderate = "6"
+threshold_heavy = "12"
+verification_threshold = "2.0"
+alert_cooldown_hours = "12"
